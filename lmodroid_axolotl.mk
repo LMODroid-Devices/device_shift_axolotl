@@ -9,10 +9,10 @@
 $(call inherit-product, device/shift/axolotl/full_axolotl.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
 
 # Override product name for Lineage.
-PRODUCT_NAME := lineage_axolotl
+PRODUCT_NAME := lmodroid_axolotl
 
 # ShiftOS - 3.6 G (20220225)
 PRODUCT_BUILD_PROP_OVERRIDES += \
