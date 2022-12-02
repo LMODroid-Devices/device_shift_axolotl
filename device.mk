@@ -295,10 +295,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
 
-PRODUCT_PACKAGES += \
-    init.insmod.cfg \
-    init.insmod.sh \
-
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
@@ -389,7 +385,7 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
+    $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml \
     $(LOCAL_PATH)/configs/permissions/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
 
 # Radio
@@ -470,10 +466,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service \
 
 # VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libcutils-v29.so \
-
 PRODUCT_PACKAGES += \
     libcomparetf2 \
     libgui_vendor \
