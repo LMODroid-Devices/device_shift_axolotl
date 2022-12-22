@@ -1,16 +1,4 @@
-# Proprietary files - from SHIFT6MQ.SOS.3.3.G.20210726-RELEASE, unless pinned
-
-# ACDB
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Codec_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
-vendor/etc/acdbdata/adsp_avs_config.acdb
+# Proprietary files - from SHIFT6MQ.SOS.3.8.G.20220824-RELEASE, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
@@ -301,12 +289,14 @@ vendor/lib/hw/vendor.qti.hardware.cvp@1.0-impl.so
 vendor/lib/libcvp.so
 vendor/lib/libcvp_common.so
 vendor/lib/libcvp_stub.so
+vendor/lib/libcvpcpuRev_skel.so
 vendor/lib/vendor.qti.hardware.cvp@1.0-halimpl.so
 vendor/lib/vendor.qti.hardware.cvp@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.cvp@1.0-impl.so
 vendor/lib64/libcvp.so
 vendor/lib64/libcvp_common.so
 vendor/lib64/libcvp_stub.so
+vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
@@ -953,7 +943,6 @@ vendor/bin/sscrpcd
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib/libcvpcpuRev_skel.so
 vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_device_mode_stub.so
@@ -966,7 +955,6 @@ vendor/lib/libssc_default_listener.so
 vendor/lib/sensors.ssc.so
 vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
@@ -1125,17 +1113,10 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so|f7769685d9c0c74f8c8419db028a5d5c3f65
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308e6cf
 
 # Widevine DRM
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib/mediadrm/libwvdrmengine.so|2f933ed1a0aa9ac28f6b1937db60672efcab007f
 vendor/lib/libhdcpsrm.so
 vendor/lib/liboemcrypto.so
-vendor/lib/libwvhidl.so|05054b19be7da5034ecaeb37f0dd99582fb9f89a
-vendor/lib64/mediadrm/libwvdrmengine.so|e27cb10d16d05dca9f79ea4c5dafce4370aad024
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/liboemcrypto.so
-vendor/lib64/libwvhidl.so|75322834e2c7c0dbeb9f6b76aa9a5f8f210d491e
 
 # Widevine DRM firmware
 vendor/firmware/cppf.b00
