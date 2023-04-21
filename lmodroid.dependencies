@@ -1,5 +1,6 @@
 [
   {
+    "remote": "lineage",
     "repository": "android_kernel_shift_sdm845",
     "target_path": "kernel/shift/sdm845"
   }
