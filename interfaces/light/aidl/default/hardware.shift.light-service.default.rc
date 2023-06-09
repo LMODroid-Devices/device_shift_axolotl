@@ -1,11 +1,4 @@
 on boot
-    # Add for Light Extension Service
-    chown system system /sys/class/leds/led:switch_0/brightness
-    chown system system /sys/class/leds/led:torch_0/brightness
-    chown system system /sys/class/leds/led:torch_0/trigger
-    chown system system /sys/class/leds/led:torch_1/brightness
-    chown system system /sys/class/leds/led:torch_1/trigger
-
     # RGB light
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/blue/blink
@@ -35,11 +28,17 @@ on boot
     chown system system /sys/class/leds/blue/start_idx
     chown system system /sys/class/leds/green/start_idx
 
-service vendor.light-hal-2-0 /vendor/bin/hw/hardware.shift.light@1.0-service
-    interface android.hardware.light@2.0::ILight default
-    interface hardware.shift.light@1.0::ILight default
-    class hal animation
+    # Torch
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_0/max_brightness
+    chown system system /sys/class/leds/led:torch_0/trigger
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:torch_1/max_brightness
+    chown system system /sys/class/leds/led:torch_1/trigger
+
+service vendor.light-default /vendor/bin/hw/hardware.shift.light-service.default
+    class hal
     user system
-    group system graphics
-    # shutting off lights while powering-off
+    group system
     shutdown critical

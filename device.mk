@@ -344,9 +344,7 @@ PRODUCT_PACKAGES += \
 
 # Light HAL
 PRODUCT_PACKAGES += \
-    hardware.shift.light@1.0 \
-    hardware.shift.light@1.0-impl \
-    hardware.shift.light@1.0-service \
+    hardware.shift.light-service.default \
 
 # LiveDisplay
 #PRODUCT_PACKAGES += \
