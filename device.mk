@@ -418,6 +418,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
+    vendor.qti.hardware.perf@2.0.vendor \
     vendor.qti.hardware.perf@2.1.vendor \
 
 # Protobuf
@@ -460,6 +461,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
     libsensorndkbridge \
+
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Telephony
 PRODUCT_PACKAGES += \
