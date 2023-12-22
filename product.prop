@@ -2,12 +2,17 @@
 # product.prop for axolotl
 #
 
+# AAudio - MMAP
+aaudio.mmap_policy=2
+aaudio.mmap_exclusive_policy=2
+aaudio.hw_burst_min_usec=2000
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
 # LMKD
-ro.lmk.critical=1
-ro.lmk.log_stats=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
 
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
@@ -16,4 +21,4 @@ telephony.lteOnCdmaDevice=1
 ro.sys.cp_msleeptime=30000
 
 # Vendor
-sys.vendor.shutdown.waittime=2000
+sys.vendor.shutdown.waittime=500
