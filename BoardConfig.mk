@@ -273,7 +273,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Reserve space for gapps installation and other customizations
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/lmodroid/config/BoardConfigReservedSize.mk
 
 # Include ShiftOS specific BoardConfig if existing
 -include device/shift/axolotl/shiftos/BoardConfig.mk
