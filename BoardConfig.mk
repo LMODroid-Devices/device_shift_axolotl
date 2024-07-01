@@ -12,7 +12,6 @@ DEVICE_PATH := device/shift/axolotl
 
 # We copy prebuilt binaries and libs instead of packaging them
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 #####
 
@@ -153,6 +152,11 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
+    vendor/lmodroid/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
@@ -264,7 +268,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 108982120448
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 # vendor.img
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4

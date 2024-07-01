@@ -16,6 +16,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit vendor blobs
 $(call inherit-product, vendor/shift/axolotl/axolotl-vendor.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 420dpi
@@ -53,10 +56,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true \
-
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files \
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -157,6 +156,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
+
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -280,6 +283,7 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
+    libion.vendor \
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -443,6 +447,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     libjson \
     librmnetctl \
+    libsqlite.vendor \
 
 # RenderScript
 PRODUCT_PACKAGES += \
@@ -499,8 +504,10 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl:64 \
-    android.hardware.vibrator@1.0-service \
+    vendor.qti.hardware.vibrator.service \
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml \
 
 # VNDK
 PRODUCT_PACKAGES += \
@@ -520,3 +527,8 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf \
+
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
