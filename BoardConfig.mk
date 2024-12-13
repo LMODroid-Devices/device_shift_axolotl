@@ -10,9 +10,6 @@ include vendor/shift/axolotl/BoardConfigVendor.mk
 
 DEVICE_PATH := device/shift/axolotl
 
-# We copy prebuilt binaries and libs instead of packaging them
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 #####
 
 # Architecture
@@ -187,8 +184,8 @@ TARGET_RECOVERY_UI_MARGIN_WIDTH := 16
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-BOOT_SECURITY_PATCH := 2023-10-05
-VENDOR_SECURITY_PATCH := 2023-10-05
+BOOT_SECURITY_PATCH := 2024-07-05
+VENDOR_SECURITY_PATCH := 2024-07-05
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
