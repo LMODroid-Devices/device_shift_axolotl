@@ -6,4 +6,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_axolotl.mk \
+    $(LOCAL_DIR)/lmodroid_axolotl.mk \
